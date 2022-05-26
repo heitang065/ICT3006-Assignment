@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Member Register Form</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script type="text/javascript" src="../js/form.js"></script>
+  <!--<script src="https://www.w3schools.com/lib/w3.js"></script>-->
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo"><a href="index.html"><img src="../image/logo.png" alt=""></a></div>
+    <!--navagation bar start-->
+    <div class="nav">
+      <ul>
+        <li><a href="index.html"><i class="class fas fa-home"></i>Home</a></li>
+        <li><a href="form.html">Register</a></li>
+        <li><a href="workout.html">Workout</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="#">Tips</a></li>
+              <li><a href="#">Protein Shake</a></li>
+              <li><a href="#">Diet</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--navagation bar end-->
+  <!--  <div w3-include-html="header.html"></div>-->
+  <div class="bg">
+    <h1>Member Form</h1>
+    <!--form start-->
+    <form name="reg" method="post" enctype="multipart/form-data" onsubmit="return CheckForm()">
+      <div class="form_inputbox">
+
+        <!--first question-->
+        <label for="firstname" class="form_label">First Name</label>
+        <input type="text" id="fname" class="form_input" placeholder='e.g. Ben' onclick="ResetMessage()" pattern="[A-Z][a-z]*" title="Please capital first character" /><br>
+        <p id="warningmessage_fname" name="warningmessage"></p>
+
+        <!--second question-->
+        <label for="lastname" class="form_label">Last Name</label>
+        <input type="text" id="lname" class="form_input" placeholder='e.g. Chan' onclick="ResetMessage()" pattern="[A-Z][a-z]*" title="Please capital first character" /><br>
+        <p id="warningmessage_lname" name="warningmessage"></p>
+
+        <!--third question-->
+        <label for="phone" class="form_label">Phone</label>
+        <input type="tel" id="phone" class="form_input" maxlength="8" placeholder='e.g. 67891234' pattern="[0-9]{8}" title="Please input you 8 digit phone number." onclick="ResetMessage()" /><br>
+        <p id="warningmessage_phone" name="warningmessage"></p>
+
+        <!--forth question-->
+        <label for="email" class="form_label">Email</label>
+        <input type="email" id="email" class="form_input" placeholder='e.g. ben123@gmail.com' onclick="ResetMessage()" /><br>
+        <p id="warningmessage_email" name="warningmessage"></p>
+
+        <!--fifth question-->
+        <label for="pw" class="form_label">Password</label>
+        <input type="password" id="pwd" class="form_input" onclick="ResetMessage()" title="The password must at least 8 digit." /><br>
+        <p id="warningmessage_pwd" name="warningmessage"></p>
+
+        <!--sixth question-->
+        <label for="pwconfirm" class="form_label">Password Confirm</label>
+        <input type="password" id="rpwd" class="form_input" onclick="ResetMessage()" title="The password and password confirm must be the same." /><br>
+        <p id="warningmessage_rpwd" name="warningmessage"></p>
+
+        <!--seventh question-->
+        <label for="gender" class="form_label">Gender</label>
+        <select name="gender" id="gender" class="form_input" onclick="ResetMessage()">
+          <option value="N">--Please Select--</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select><br>
+        <p id="warningmessage_gender" name="warningmessage"></p>
+
+      </div>
+      <br>
+      <input type="submit" value="Submit" onclick="ResetMessage()">
+      <input type="reset" value="Reset" onclick="ResetMessage()" />
+    </form>
+  </div>
+  <!--
+  <script>
+    w3.includeHTML();
+  </script>
+-->
+</body></html>

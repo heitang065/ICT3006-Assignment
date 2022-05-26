@@ -1,0 +1,116 @@
+body {
+  font-family: sans-serif;
+  background-color: #707070;
+}
+
+/*control the background*/
+.bg {
+  position: absolute;
+  background: #707070;
+  background-image: url(../image/formbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+  filter: brightness(95%);
+  height: 77%;
+  width: 100%;
+}
+
+.bg h1 {
+  padding-top: 20px;
+  text-align: center;
+  color: #000;
+  text-shadow: 2px 2px 2px #ecf0f1;
+  width: 99%;
+}
+
+/*control the form property*/
+form {
+  margin: 0;
+  height: 600px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 2px 2px 3px #000;
+}
+
+/*change the placeholder font color*/
+::placeholder {
+  color: #c4c4c4;
+}
+
+/*change the warning message property*/
+form p {
+  position: absolute;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #ff0000;
+  width: 100%;
+  text-align: center;
+  text-shadow: none;
+}
+
+/*change the submit and reset button property*/
+form input[type="submit"],
+form input[type="reset"] {
+  margin: 30px 30px;
+  height: 40px;
+  width: 100px;
+  border: 3px solid;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 3px 3px 3px #2f3542;
+  cursor: pointer;
+  outline: none;
+  transition: .1s;
+}
+
+form input[type="submit"] {
+  border-color: #00d100;
+}
+
+form input[type="reset"] {
+  border-color: #d10000;
+}
+
+/*adding the effect for the submit and reset button*/
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+  background: #ced6e0;
+}
+
+form input[type="submit"]:active,
+form input[type="reset"]:active {
+  box-shadow: none;
+}
+
+.form_label {
+  margin-top: 25px;
+  font-weight: bold;
+  display: block;
+}
+
+.form_input {
+  width: 425px;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 2px solid #2c3e50;
+  transition: 0.25s;
+}
+
+.form_input:focus {
+  background: #D0F2E4;
+  border: 2px solid #87CEEB;
+}
+
+@media only screen and (max-width: 550px) {
+  .form_input {
+    width: 70%;
+  }
+}

@@ -1,0 +1,71 @@
+/*control the line above the monkey property*/
+.line {
+  top: 770px;
+  width: 90%;
+  border: 2px solid #000;
+  border-radius: 50%;
+  margin: 10px 5%;
+}
+
+.footer {
+  top: 780px;
+  left: 155px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.footer li {
+  font-family: cursive;
+  list-style-type: none;
+  margin: 0 30px;
+  width: 140px;
+}
+
+/*move the first and second column text to the right*/
+#col1,
+#col2 {
+  text-align: right;
+}
+
+/*align the monkey head to center*/
+#col3 {
+  text-align: center;
+}
+
+.footer img {
+  height: 100px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+@media only screen and (max-width:1155px) {
+  .footer li {
+    margin: 0 5px;
+  }
+}
+
+@media only screen and (max-width:766px) {
+  #col3 {
+    display: none;
+  }
+
+  #col1,
+  #col2 {
+    text-align: left;
+  }
+}
+@media only screen and (max-width:616px) {
+  .footer li {
+    width: 90px;
+    margin: 0 15px;
+  }
+}

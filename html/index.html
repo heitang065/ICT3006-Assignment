@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <!--link to .css-->
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script type="text/javascript" src="../js/index.js"></script>
+  <!--  <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>-->
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="logo"><a href="index.html"><img src="../image/logo.png" alt=""></a></div>
+    <!--    navagation bar start-->
+    <div class="nav">
+      <ul>
+        <!--    create a list to store different pages-->
+        <li><a href="index.html"><i class="class fas fa-home"></i>Home</a></li>
+        <li><a href="form.html">Register</a></li>
+        <li><a href="workout.html">asdf</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="#">Tips</a></li>
+              <li><a href="#">Protein Shake</a></li>
+              <li><a href="#">Diet</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--    navagation bar end-->
+  </div>
+
+<!--  <div w3-include-html="header.html"></div>-->
+  <div class="main">
+    <!--    login bar start-->
+    <form class="loginnav" method="post" onsubmit="return CheckForm()" onclick="ResetMessage">
+      <lable class="login" name="uName">User Name:</lable>
+      <input class="login" type="text" id="uName" onclick="ResetMessage()" />
+      <p id="loginmessage_name" name="warningmessage"></p>
+      <lable class="login" name="pwd">Password:</lable>
+      <input class="login" type="password" id="pwd" onclick="ResetMessage()" />
+      <p id="loginmessage_pwd" name="warningmessage"></p>
+      <input type="submit" class="loginbtn" value="Login">
+    </form>
+
+    <!--    main body-->
+    <!--    slider start-->
+    <div class="container">
+      <div class="slider">
+        <div class="slides">
+          <!--          hidden input button-->
+          <input type="radio" name="radiobtn" id="radio1">
+          <input type="radio" name="radiobtn" id="radio2">
+          <input type="radio" name="radiobtn" id="radio3">
+          <input type="radio" name="radiobtn" id="radio4">
+          <!--          slide image-->
+          <div class="slide first">
+            <a href="#"><img src="../image/news1.jpg" alt=""></a>
+          </div>
+          <div class="slide">
+            <a href="#"><img src="../image/news2.jpg" alt=""></a>
+          </div>
+          <div class="slide">
+            <a href="#"><img src="../image/news3.jpg" alt=""></a>
+          </div>
+          <div class="slide">
+            <a href="#"><img src="../image/news4.jpg" alt=""></a>
+          </div>
+        </div>
+        <!--        manual slide-->
+        <div class="manualnav">
+          <label for="radio1" class="manbtn"></label>
+          <label for="radio2" class="manbtn"></label>
+          <label for="radio3" class="manbtn"></label>
+          <label for="radio4" class="manbtn"></label>
+        </div>
+      </div>
+    </div>
+    <!--    slider end-->
+  </div>
+<!--  <div w3-include-html="footer.html"></div>-->
+  <div class="line"></div>
+  <div class="footer">
+    <ol id="col1">
+      <li>
+        <h4>Account</h4>
+      </li>
+      <li><a href="#">Manage Your Account</a></li>
+      <li><a href="#">Register</a></li><br>
+    </ol>
+    <ol id="col2">
+      <li>
+        <h4>Our Store</h4>
+      </li>
+      <li><a href="#">Shop Online</a></li>
+      <li><a href="#">Refund</a></li>
+      <li><a href="#">Order Status</a></li>
+      <li><a href="#">Shopping Help</a></li>
+    </ol>
+    <ol id="col3">
+      <li><img src="../image/logo.png" alt=""></li>
+    </ol>
+    <ol id="col4">
+      <li>
+        <h4>Our Values</h4>
+      </li>
+      <li><a href="#">Accessibility</a></li>
+      <li><a href="#">Environment</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Supplier Responsibility</a></li><br>
+    </ol>
+    <ol id="col5">
+      <li>
+        <h4>About Us</h4>
+      </li>
+      <li><a href="#">Newsroom</a></li>
+      <li><a href="#">Leadership</a></li>
+      <li><a href="#">Job Opportunities</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ol>
+  </div>
+  <!--
+  <script>
+    w3.includeHTML();
+  </script>
+-->
+</body>
+
+</html>

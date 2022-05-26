@@ -1,0 +1,212 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #707070;
+}
+
+/*control the login navigation bar*/
+.loginnav {
+  margin: 0;
+  height: 55px;
+  background: linear-gradient(to bottom right, #3498db, #27ae60);
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  border: 3px solid #2c3e50;
+}
+
+.login {
+  margin-top: 15px;
+  height: 20px;
+  border-radius: 20px;
+  outline: none;
+  text-shadow: 1px 1px 1px #ecf0f1;
+  color: #000;
+}
+
+/*set the position of login input box*/
+.loginnav input[type="text"],
+.loginnav input[type="password"] {
+  padding-left: .5%;
+  margin: 15px 40px 0 20px;
+}
+
+#loginmessage_name,
+#loginmessage_pwd {
+  position: absolute;
+  top: 270px;
+  color: #ff0000;
+}
+
+/*set the position and size of login button*/
+.loginbtn {
+  margin: 13px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 30px;
+  width: 80px;
+  height: 27px;
+  background: none;
+  border: 3px solid;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: .1s;
+  outline: none;
+}
+
+.loginbtn:hover {
+  background: #95a5a6;
+  color: #ecf0f1;
+  box-shadow: 3px 3px 3px #000;
+}
+
+.loginbtn:active {
+  box-shadow: 1px 1px 1px #2c3e50;
+}
+
+/*set the position and size of news slider*/
+.container {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/*control the size of the slides*/
+.slider {
+  width: 800px;
+  height: auto;
+  overflow: hidden;
+  border: 3px solid #2c3e50;
+  border-radius: 20px;
+}
+
+/*to store the image*/
+.slides {
+  width: 500%;
+  height: auto;
+  display: flex;
+}
+
+/*hide the radio button*/
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s ease-out;
+  display: flex;
+}
+
+/*control the slider's images*/
+.slide img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/*control the new manual navigation*/
+.manualnav {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+/*control the new manual navigation button*/
+.manbtn {
+  border: 3px solid white;
+  padding: 3px 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/*set the margin but not include the last button*/
+.manbtn:not(:last-child) {
+  margin-right: 20px;
+}
+
+/*adding manual button effect*/
+.manbtn:hover {
+  background: white;
+  opacity: 1;
+}
+
+/*to show the first news image*/
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+/*to show the second new image with moving left*/
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/*set new item order to fit in the width within 641px and 806px*/
+@media only screen and (max-width: 806px) {
+  .slider {
+    width: 100%;
+  }
+
+  .manualnav {
+    width: 99%;
+  }
+
+  .loginnav input[type="text"],
+  .loginnav input[type="password"] {
+    margin: 15px 20px 0 0px;
+  }
+}
+
+/*set new item order to fit in the width smaller than 641px*/
+@media only screen and (max-width: 641px) {
+
+  .loginnav {
+    display: block;
+    height: 100px;
+  }
+
+  .loginnav input[type="text"] {
+    padding-left: 1.5%;
+    margin: 15px 25% 0 5%;
+  }
+
+  .loginnav input[type="password"] {
+    padding-left: 1.5%;
+    margin: 15px 25% 0 6.9%;
+  }
+
+  form lable {
+    margin-left: 10%;
+  }
+
+  .loginbtn {
+    position: absolute;
+    top: 270px;
+    left: 75%;
+  }
+
+  #loginmessage_name,
+  #loginmessage_pwd {
+    position: absolute;
+    top: 310px;
+    left: 30%;
+  }
+}
